@@ -9,6 +9,8 @@ import { MaterialModule } from './material.module';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { environment } from '../app/environments/environment';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { environment } from '../app/environments/environment';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    RecaptchaV3Module
+    RecaptchaV3Module,
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [
     {

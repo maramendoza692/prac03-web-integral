@@ -4,11 +4,15 @@
   </button>
   <span>Login App</span>
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
+  <button mat-icon-button (click)="onLogout()">
+    <mat-icon>login</mat-icon>
   </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
-  <button class="btn btn-outline-dark buttonCerrarSesion" (click)="logout()">Cerrar sesión</button>
+  <ng-container *ngIf="data == null; else elseTemplate">
+    <button mat-button></button>
+  </ng-container>
+  <ng-template #elseTemplate>
+    <button mat-button>{{ +data?.nombre + ' ' + data?.apellido}}</button>
+  </ng-template>
+
+  <button class="btn btn-outline-dark buttonCerrarSesion" (click)="onLogout()">Cerrar sesión</button>
 </mat-toolbar>

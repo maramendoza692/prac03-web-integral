@@ -1,7 +1,7 @@
 <mat-grid-list cols="1" rowHeight="100%" class="fondo">
   <mat-grid-tile>
     <mat-card [class.mat-elevation-z8]="true">
-      <mat-card-content>
+      <div><mat-card-content>
         <h3>Iniciar Sesión</h3>
         <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
           <mat-form-field class="full-width" appearance="outline">
@@ -20,11 +20,11 @@
           </mat-form-field>
 
           <button type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid">Acceder</button>
-          <div *ngIf="tokenVisible">reCAPTCHA Token <br>
+          <div *ngIf="tokenVisible" style="text-align: center;">reCAPTCHA Token <br/>
             <p style="color: red">{{reCAPTCHAToken}}</p>
           </div>
         </form>
-      </mat-card-content>
+      </mat-card-content></div>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>

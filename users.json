@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin",
+      "role": {
+        "id": 1,
+        "name": "Administrator",
+        "permissions": [
+          "viewReports",
+          "editReports",
+          "deleteReports"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "user",
+      "role": {
+        "id": 2,
+        "name": "User",
+        "permissions": [
+          "viewReports"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "username": "user03",
+      "password": "12345",
+      "role": "{}"
+    },
+    {
+      "id": 4,
+      "username": "user04",
+      "password": "12345",
+      "role": "{}"
+    }
+  ]
+}
